@@ -1,7 +1,10 @@
 import './App.css'
+import { AuthProvider } from './context/authContext';
 import { FormAction } from './formAction';
 import { FormState } from './formState';
 import { FormStatus } from './formStatus';
+import { Repos } from './repos';
+import { User } from './user';
 
 function App() {
 
@@ -11,7 +14,13 @@ function App() {
 
       {/* <FormState /> */}
 
-      <FormStatus />
+      {/* <FormStatus /> */}
+
+      <AuthProvider>
+        <User />
+      </AuthProvider>
+
+      <Repos />
     </>
   )
 }
