@@ -1,34 +1,17 @@
-import { useState } from 'react';
 import './App.css'
-import FormState from './formState';
+import { FormAction } from './formAction';
+import { FormState } from './formState';
+import { FormStatus } from './formStatus';
 
 function App() {
 
-  const [tasks, setTasks] = useState([]);
-
-  function handleAddTask(formData) {
-    const name = formData.get("task");
-
-    setTasks(prevState => [...prevState, name]);
-  }
-
   return (
     <>
-      {/* <form action={handleAddTask} >
-        <label>Nome da tarefa</label>
-        <input type="text" name='task' />
-        <button type="submit">cadastrar</button>
-      </form>
+      {/* <FormAction /> */}
 
-      <ul>
-        {tasks.map((item) => (
-          <li key={item}>
-            {item}
-          </li>
-        ))}
-      </ul> */}
+      {/* <FormState /> */}
 
-      <FormState />
+      <FormStatus />
     </>
   )
 }

@@ -1,6 +1,6 @@
 import { useActionState } from "react"
 
-function FormState() {
+export function FormState() {
 
   const submitForm = (prevState, formData) => {
     const name = formData.get("username");
@@ -38,5 +38,3 @@ function FormState() {
     </div>
   );
 }
-
-export default FormState;
